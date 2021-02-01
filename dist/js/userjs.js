@@ -137,7 +137,7 @@
                 }
 
                 if (key === 'email') {
-                  this.warning[key] = !this.mailRegex.test(this.form[key]);
+                  this.warning[key] = this.form[key].indexOf('@') >= 0;
                 }
               }
             }
