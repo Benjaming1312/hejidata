@@ -45,6 +45,9 @@ div.design
         display: block
         width: 100%
         text-align: center
+    >span:not(.right)
+      @media #{$mobile}
+        margin-top: 7.5px
     span, a
       font-size: 14px
       color: white
