@@ -44,10 +44,6 @@ module.exports = function () {
           else {
             this.warning[key] = false
 
-            if (key === 'number') {
-              this.warning[key] = !this.phoneRegex.test(this.form[key])
-            }
-
             if (key === 'email') {
               this.warning[key] = !this.form[key].includes('@')
             }
