@@ -137,7 +137,7 @@
                 }
 
                 if (key === 'email') {
-                  this.warning[key] = !this.form[key].indexOf('@') >= 0;
+                  this.warning[key] = !this.form[key].includes('@');
                 }
               }
             }
@@ -145,6 +145,7 @@
             if (Object.values(this.warning).some(function (err) {
               return err;
             })) {
+              console.log('%c (╬ﾟдﾟ) warning:', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff;', this.warning);
               this.successClass = 'in alert-danger';
               this.alertMessage = '资料填写未完全';
               this.loading = false;
