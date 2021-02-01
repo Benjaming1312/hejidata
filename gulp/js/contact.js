@@ -49,7 +49,7 @@ module.exports = function () {
             }
 
             if (key === 'email') {
-              this.warning[key] = this.form[key].indexOf('@') >= 0
+              this.warning[key] = !this.form[key].indexOf('@') >= 0
             }
           }
         }
