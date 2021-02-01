@@ -33,6 +33,6 @@
       span.glyphicon.glyphicon-refresh(v-if="loading")
     .col-xs-12.col-sm-12
       p.text-center
-        span.svg.scroll(style="background:url("+url+"arrow-blue.svg); width: 42px; height: 21px;")
+        span.svg.scroll(style="background:url("+url+"arrow-blue.svg); width: 42px; height: 21px;" @click="scrollTo")
   .alert.fade(role="alert" :class="successClass")
     p {{alertMessage}}

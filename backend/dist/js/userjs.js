@@ -101,11 +101,15 @@
           },
           success: false,
           successClass: '',
-          alertMessage: '',
-          phoneRegex: new RegExp(/^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/),
-          mailRegex: new RegExp(/[a-z0-9.-_]+@[a-z.]+/)
+          alertMessage: ''
         },
         methods: {
+          scrollTo: function scrollTo() {
+            var top = $("#foot").offset().top;
+            $('html, body').stop().animate({
+              scrollTop: top
+            }, 1000);
+          },
           closeAlert: function closeAlert() {
             var _this = this;
 
