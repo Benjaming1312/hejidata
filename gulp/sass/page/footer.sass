@@ -45,6 +45,10 @@ div.design
         display: block
         width: 100%
         text-align: center
+      &:nth-last-child(2)
+        margin-left: 7.5px
+        @media #{$mobile}
+          margin-left: 0
     >span:not(.right)
       @media #{$mobile}
         margin-top: 7.5px
