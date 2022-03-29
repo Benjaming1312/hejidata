@@ -22,7 +22,7 @@ const gotop = require('./scrollTo')
 // const search = require('./search.js')
 // const footer = require('./footer.js')
 
-const baiduInit = require('./baidu.js')
+// const baiduInit = require('./baidu.js')
 const contact = require('./contact.js')
 
 // const swiperJS = require('./swiper/index.js')
@@ -39,7 +39,7 @@ $(function () {
     particlesJS.load('particles-js', './dist/static/particles.json', function() {
     })
 
-    baiduInit()
+    // baiduInit()
     contact()
     aosInit()    
   }

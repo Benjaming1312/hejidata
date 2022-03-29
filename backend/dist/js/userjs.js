@@ -27,62 +27,6 @@
     };
   }, {}], 2: [function (require, module, exports) {
     module.exports = function () {
-      initMap(); //创建和初始化地图
-    };
-
-    //创建和初始化地图函数：
-    function initMap() {
-      if (!BMap) {
-        setTimeout(function () {
-          initMap();
-        }, 1000);
-      } else {
-        createMap(); //创建地图
-        setMapEvent(); //设置地图事件
-        addMapControl(); //向地图添加控件
-      }
-    }
-
-    //创建地图函数：
-    function createMap() {
-      var map = new BMap.Map("dituContent"); //在百度地图容器中创建一个地图
-      var point = new BMap.Point(121.361189, 31.165525); //定义一个中心点坐标
-      map.centerAndZoom(point, 17); //设定地图的中心点和坐标并将地图显示在地图容器中
-      var marker = new BMap.Marker(point); // 创建标注
-      map.addOverlay(marker); // 将标注添加到地图中
-      // marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
-      // var label = new BMap.Label("上海市闵行区新龙路399弄1号\n上坤国际广场T4栋11层1102C室",{offset:new BMap.Size(20,-10)});
-      // label.setStyle({
-      //   maxWidth: 'initial',
-      //   width: '175px',
-      //   whiteSpace: 'break-spaces'
-      // })
-      // marker.setLabel(label);
-      window.map = map; //将map变量存储在全局
-    }
-
-    //地图事件设置函数：
-    function setMapEvent() {
-      map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)
-      map.enableScrollWheelZoom(); //启用地图滚轮放大缩小
-      map.enableDoubleClickZoom(); //启用鼠标双击放大，默认启用(可不写)
-      map.enableKeyboard(); //启用键盘上下左右键移动地图
-    }
-
-    //地图控件添加函数：
-    function addMapControl() {
-      //向地图中添加缩放控件
-      var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
-      map.addControl(ctrl_nav);
-      //向地图中添加缩略图控件
-      var ctrl_ove = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 });
-      map.addControl(ctrl_ove);
-      //向地图中添加比例尺控件
-      var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
-      map.addControl(ctrl_sca);
-    }
-  }, {}], 3: [function (require, module, exports) {
-    module.exports = function () {
       var app = new Vue({
         el: '#section-2',
         data: {
@@ -181,7 +125,7 @@
         }
       });
     };
-  }, {}], 4: [function (require, module, exports) {
+  }, {}], 3: [function (require, module, exports) {
     // $(function () {
     //     // owlcarouselfn('.banner .row .col-xs-12', false, true)
     // })
@@ -206,7 +150,7 @@
     // const search = require('./search.js')
     // const footer = require('./footer.js')
 
-    var baiduInit = require('./baidu.js');
+    // const baiduInit = require('./baidu.js')
     var contact = require('./contact.js');
 
     // const swiperJS = require('./swiper/index.js')
@@ -222,7 +166,7 @@
         // particles
         particlesJS.load('particles-js', './dist/static/particles.json', function () {});
 
-        baiduInit();
+        // baiduInit()
         contact();
         aosInit();
       };
@@ -328,7 +272,7 @@
     // $(function () {
     //   es6()
     // })
-  }, { "./aos": 1, "./baidu.js": 2, "./contact.js": 3, "./scrollTo": 5 }], 5: [function (require, module, exports) {
+  }, { "./aos": 1, "./contact.js": 2, "./scrollTo": 4 }], 4: [function (require, module, exports) {
     // $(function () {
     //     $('.gotop a').on('click', function () {
     //         $('html, body').animate({
@@ -358,5 +302,5 @@
         }, 1000);
       });
     };
-  }, {}] }, {}, [4]);
+  }, {}] }, {}, [3]);
 //# sourceMappingURL=userjs.js.map
